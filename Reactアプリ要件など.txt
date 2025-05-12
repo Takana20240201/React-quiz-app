@@ -1,0 +1,61 @@
+[ページ一覧]
+1. TOPページ
+2. クイズページ
+3. 結果ページ
+
+[機能一覧]
+1. TOPページ
+- ボタン：押したらクイズページへ遷移
+2. クイズページ
+- 問題文を表示
+- 選択肢を表示
+- 押したら。。。
+　1. 正誤判定を行い、記録しておく
+　2-1. 問題文がまだあれば、次の問題文を表示
+　2-2. 問題文がもうなければ、結果ページへ遷移
+3. 結果ページ
+- 表示までの演出（カーテンコール）を1~2秒表示させて非表示
+- クラッカー演出
+- 問題総数と正解数を取得し、表示
+
+詳しい手順
+
+新規フォルダの作成
+VScodeで開きターミナルを開く
+Viteのコマンドを実行（npm create vite@latest(バージョン選択)）
+Project Nameはフォルダ名でいいので.
+React Javascriptを選択
+ディレクトリ直下に、ファイルが展開されるのでnpm installとnpm run devを実行
+Eslintの設定rulesに追記しておく
+// 使用されていない、または未定義の変数をエラーとして報告
+// 最後の行は、現在ではあまり使われていないのでオフにする
+"no-undef": "error",
+"no-unused-vars": "error",
+"react/prop-types": "off",
+ページの土台を整えていく
+Srcフォルダ内に、pagesフォルダを作成し、必要なページ.jsxを作成する
+スニペットrfcを使って時短していく
+ルーティングに必要なパッケージをインストール(nam install react-router-domでReact Routerを使えるようにしてSPA化)
+URLを定数として定義しておくsrc直下にconst.jsファイルを作成し
+export const ROUTES = {
+    HOME: "/",
+    QUIZ: "/quiz",
+    RESULT: "/result"
+}
+と記述
+App.jsxを編集していく
+デフォのいらない部分を消して以下にする
+import './App.css'
+
+function App() {
+
+  return (
+    <>
+
+    </>
+  )
+}
+
+export default App
+要素を生成して表示させるプロセスのことをレンダリングという
+
