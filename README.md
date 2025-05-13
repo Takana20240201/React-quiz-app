@@ -1,7 +1,7 @@
 # React Quiz App
 
 このアプリは、ReactとViteを使って開発したクイズ形式のWebアプリです。
-こちらの動画（https://youtu.be/TgU-FT2WdS4?si=zaV7m1YZASSA3xSj）を参考に
+[こちらの動画]（https://youtu.be/TgU-FT2WdS4?si=zaV7m1YZASSA3xSj）を参考に
 Reactの基礎やルーティング、状態管理の練習を目的として作成しました。
 
 ---
